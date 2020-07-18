@@ -1,21 +1,21 @@
-const express = require('express')
 
-const app = express()
+const express = require("express");
+const mongoose = require("mongoose");
 
-const port = 8000
+const app = express();
 
-app.get('/', (req, res)=>{
-  res.send("Hello Home Page")
-})
+mongoose
+  .connect("mongodb://localhost:27017/tshirtstore", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    console.log("DB CONNECTED");
+  });
 
-app.get('/login', (req, res)=>{
-  res.send("Login")
-})
+const port = process.env.PORT || 8000;
 
-app.get('/signup', (req,res)=>{
-  res.send("Signup")
-})
-
-app.listen(port, ()=>{
-  console.log(`Server is up and running at http://localhost:${port}`)
-})
+app.listen(port, () => {
+  console.log(`Server is up and running at http://localhost:${port}`);
+});
