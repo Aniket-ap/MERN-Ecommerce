@@ -6,7 +6,7 @@ const Base = ({
   title = "My Title",
   description = "My desription",
   className = "bg-dark text-white p-4",
-  children
+  children,
 }) => (
   <div>
     <Menu />
@@ -28,7 +28,7 @@ const Base = ({
         </span>
       </div>
     </footer> */}
-    <Footer/>
+    <Footer />
   </div>
 );
 
