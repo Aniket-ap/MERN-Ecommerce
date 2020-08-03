@@ -10,7 +10,7 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   const loadAllProduct = () => {
-    getProducts().then(data => {
+    getProducts().then((data) => {
       if (data.error) {
         setError(data.error);
       } else {
