@@ -10,7 +10,7 @@ const ManageCategories = () => {
   const { user, token } = isAutheticated();
 
   const preload = () => {
-    getCategories().then(data => {
+    getCategories().then((data) => {
       if (data.error) {
         console.log(data.error);
       } else {
