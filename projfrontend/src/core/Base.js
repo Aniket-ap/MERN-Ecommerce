@@ -5,7 +5,7 @@ const Base = ({
   title = "My Title",
   description = "My desription",
   className = "bg-dark text-white p-4",
-  children
+  children,
 }) => (
   <div>
     <Menu />
@@ -23,7 +23,8 @@ const Base = ({
       </div>
       <div className="container">
         <span className="text-muted">
-          An Amazing Place for Buying <span className="text-white">T-Shirt.</span>
+          An Amazing Place for Buying{" "}
+          <span className="text-white">T-Shirt.</span>
         </span>
       </div>
     </footer>
