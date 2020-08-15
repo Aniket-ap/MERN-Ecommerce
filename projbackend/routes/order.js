@@ -9,7 +9,7 @@ const {
   createOrder,
   getAllOrders,
   getOrderStatus,
-  updateStatus
+  updateStatus,
 } = require("../controllers/order");
 
 //params
